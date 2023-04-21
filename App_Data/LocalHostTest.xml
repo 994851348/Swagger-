@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication</name>
+    </assembly>
+    <members>
+        <member name="T:WebApplication.SwaggerConfig">
+            <summary>
+            API生成配置
+            </summary>
+        </member>
+        <member name="M:WebApplication.SwaggerConfig.Register">
+            <summary>
+            API文档生成注册
+            </summary>
+        </member>
+        <member name="T:WebApplication.WebApiConfig">
+            <summary>
+             Web API路由
+            </summary>
+        </member>
+        <member name="M:WebApplication.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+             注册路由规则
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:WebApplication.WebApiApplication">
+            <summary>
+            全部配置
+            </summary>
+        </member>
+        <member name="M:WebApplication.WebApiApplication.Application_Start">
+            <summary>
+            用户起始路由
+            </summary>
+        </member>
+        <member name="M:WebApplication.WebApiApplication.Application_BeginRequest">
+            <summary>
+            跨域设置（预请求响应问题）
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LocalHostTest</name>
+    </assembly>
+    <members>
+        <member name="T:WebApplication.SwaggerConfig">
+            <summary>
+            API生成配置
+            </summary>
+        </member>
+        <member name="M:WebApplication.SwaggerConfig.Register">
+            <summary>
+            API文档生成注册
+            </summary>
+        </member>
+        <member name="T:WebApplication.WebApiConfig">
+            <summary>
+             Web API路由
+            </summary>
+        </member>
+        <member name="M:WebApplication.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+             注册路由规则
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:WebApplication.Dapper.DbHelper">
+            <summary>
+            数据库处理底层封装
+            </summary>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.QueryToList``1(System.String,System.String,System.String,System.Object)">
+            <summary>
+            执行sql并且返回实体List类型
+            </summary>
+            <param name="files">字段</param>
+            <param name="tableName"></param>
+            <param name="where"></param>
+            <param name="_object"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.QueryToModel``1(System.String,System.String,System.String,System.Object)">
+            <summary>
+            执行sql并且返回实体类型
+            </summary>
+            <param name="files">字段</param>
+            <param name="tableName"></param>
+            <param name="where"></param>
+            <param name="_object"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.Insert``1(System.Object)">
+            <summary>
+            新增实体表
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.Update``1(System.Object)">
+            <summary>
+            修改实体表
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.Delete``1(System.Object)">
+            <summary>
+            删除
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.GetDataTableBySql(System.String)">
+            <summary>
+            获取DataTable
+            </summary>
+            <param name="sql">sql语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.GetDataTableByParamsSql(System.String,System.Object)">
+            <summary>
+            获取DataTable
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.UpdateByParamsSql(System.String,System.Object)">
+            <summary>
+            更新
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.GetDataTable(System.String,System.String)">
+            <summary>
+            获取DataTable
+            </summary>
+            <param name="files">字段</param>
+            <param name="tableName">表</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.GetDataTableByParams(System.String,System.String,System.String,System.Object)">
+            <summary>
+            获取DataTable
+            </summary>
+            <param name="files">字段</param>
+            <param name="tableName">表</param>
+            <param name="where">条件</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.GetPageList(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Object)">
+            <summary>
+            获取sql
+            </summary>
+            <param name="files">列</param>
+            <param name="tableName">表</param>
+            <param name="where">条件</param>
+            <param name="orderby">排序</param>
+            <param name="pageIndex">当前页</param>
+            <param name="pageSize">当前页显示条数</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.GetPageListCount(System.String,System.String,System.String,System.Object)">
+            <summary>
+            获取总数
+            </summary>
+            <param name="files">字段</param>
+            <param name="tableName">表</param>
+            <param name="where">条件</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.IDataReaderToDataTable(System.Data.IDataReader)">
+            <summary>
+            把idatareader转换成datatable
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.RightJoin(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            右连接获取DataTable
+            </summary>
+            <param name="files"></param>
+            <param name="leftTable"></param>
+            <param name="rightTable"></param>
+            <param name="leftColumn"></param>
+            <param name="rightColumn"></param>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication.Dapper.DbHelper.RightToList``1(System.String,System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="files"></param>
+            <param name="leftTable"></param>
+            <param name="rightTable"></param>
+            <param name="leftColumn"></param>
+            <param name="rightColumn"></param>
+            <param name="where"></param>
+            <param name="_object"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplication.WebApiApplication">
+            <summary>
+            全部配置
+            </summary>
+        </member>
+        <member name="M:WebApplication.WebApiApplication.Application_Start">
+            <summary>
+            用户起始路由
+            </summary>
+        </member>
+        <member name="M:WebApplication.WebApiApplication.Application_BeginRequest">
+            <summary>
+            跨域设置（预请求响应问题）
+            </summary>
+        </member>
+        <member name="T:LocalHostTest.Dapper.MySQLHelper">
+            <summary>
+            MySQL处理底层封装
+            </summary>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.GetDataTable(System.String)">
+            <summary>
+            查询
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.QueryToList``1(System.String,System.String,System.String,System.Object)">
+            <summary>
+            执行sql并返回List泛型
+            </summary>
+            <typeparam name="T">模型</typeparam>
+            <param name="files">查询字段</param>
+            <param name="tableName">表名</param>
+            <param name="where">条件</param>
+            <param name="_object">object</param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.QueryToModel``1(System.String,System.String,System.String,System.Object)">
+            <summary>
+            执行sql并且返回实体类型
+            </summary>
+            <param name="files">字段</param>
+            <param name="tableName"></param>
+            <param name="where"></param>
+            <param name="_object"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.Insert``1(System.Object)">
+            <summary>
+            新增实体表
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.Update``1(System.Object)">
+            <summary>
+            修改实体表
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.Delete``1(System.Object)">
+            <summary>
+            删除
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.GetDataTableBySql(System.String)">
+            <summary>
+            获取DataTable
+            </summary>
+            <param name="sql">sql语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.GetDataTableByParamsSql(System.String,System.Object)">
+            <summary>
+            获取DataTable
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.UpdateByParamsSql(System.String,System.Object)">
+            <summary>
+            更新
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.GetDataTable(System.String,System.String)">
+            <summary>
+            获取DataTable
+            </summary>
+            <param name="files">字段</param>
+            <param name="tableName">表</param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.GetDataTableByParams(System.String,System.String,System.String,System.Object)">
+            <summary>
+            获取DataTable
+            </summary>
+            <param name="files">字段</param>
+            <param name="tableName">表</param>
+            <param name="where">条件</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.GetPageList(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Object)">
+            <summary>
+            获取sql
+            </summary>
+            <param name="files">列</param>
+            <param name="tableName">表</param>
+            <param name="where">条件</param>
+            <param name="orderby">排序</param>
+            <param name="pageIndex">当前页</param>
+            <param name="pageSize">当前页显示条数</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.GetPageListCount(System.String,System.String,System.String,System.Object)">
+            <summary>
+            获取总数
+            </summary>
+            <param name="files">字段</param>
+            <param name="tableName">表</param>
+            <param name="where">条件</param>
+            <param name="_object">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Dapper.MySQLHelper.IDataReaderToDataTable(System.Data.IDataReader)">
+            <summary>
+            把idatareader转换成datatable
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LocalHostTest.Secure.ApiResult">
+            <summary>
+            返回DataTable结果集Model
+            </summary>
+        </member>
+        <member name="P:LocalHostTest.Secure.ApiResult.success">
+            <summary>
+            返回成功
+            </summary>
+        </member>
+        <member name="P:LocalHostTest.Secure.ApiResult.msg">
+            <summary>
+            失败提醒
+            </summary>
+        </member>
+        <member name="P:LocalHostTest.Secure.ApiResult.data">
+            <summary>
+            返回的数据格式
+            </summary>
+        </member>
+        <member name="P:LocalHostTest.Secure.ApiResult.count">
+            <summary>
+            返回的总数
+            </summary>
+        </member>
+        <member name="T:LocalHostTest.Secure.ApiResult`1">
+            <summary>
+            返回List\泛型结果集Model
+            </summary>
+        </member>
+        <member name="P:LocalHostTest.Secure.ApiResult`1.success">
+            <summary>
+            返回成功
+            </summary>
+        </member>
+        <member name="P:LocalHostTest.Secure.ApiResult`1.msg">
+            <summary>
+            失败提醒
+            </summary>
+        </member>
+        <member name="P:LocalHostTest.Secure.ApiResult`1.data">
+            <summary>
+            返回的数据格式
+            </summary>
+        </member>
+        <member name="P:LocalHostTest.Secure.ApiResult`1.dataT">
+            <summary>
+            返回的数据格式
+            </summary>
+        </member>
+        <member name="P:LocalHostTest.Secure.ApiResult`1.count">
+            <summary>
+            返回的总数
+            </summary>
+        </member>
+        <member name="T:LocalHostTest.Secure.ResponseResult">
+            <summary>
+            返回封装结果集
+            </summary>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.Success(System.Data.DataTable,System.Int32)">
+            <summary>
+            返回DataTable成功
+            </summary>
+            <param name="data"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.SuccessAll(System.Data.DataTable,System.Int32,System.String)">
+            <summary>
+            返回DataTable成功
+            </summary>
+            <param name="data"></param>
+            <param name="count"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.Success``1(System.Collections.Generic.List{``0},System.Nullable{System.Int32},System.String)">
+            <summary>
+            返回List成功
+            </summary>
+            <param name="data"></param>
+            <param name="count"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.Success``1(``0,System.Nullable{System.Int32},System.String)">
+            <summary>
+            返回自定义成功
+            </summary>
+            <param name="dataT"></param>
+            <param name="count"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.Success``1(LocalHostTest.Secure.ApiResult{``0})">
+            <summary>
+            返回成功
+            </summary>
+            <param name="apiResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.SuccessCount(System.String,System.Int32)">
+            <summary>
+            返回成功Count
+            </summary>
+            <param name="message"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.FailCount(System.String,System.Int32)">
+            <summary>
+            返回失败
+            </summary>
+            <param name="message"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.Fail(System.String)">
+            <summary>
+            返回失败
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.Fail``1(System.String)">
+            <summary>
+            返回失败
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.SuccessMsg(System.String)">
+            <summary>
+            返回成功
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.FailData``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            返回失败,加个集合
+            </summary>
+            <param name="message"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LocalHostTest.Secure.ResponseResult.SuccessMsgData``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            返回成功Msg,加个集合
+            </summary>
+            <param name="message"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
